@@ -5,13 +5,14 @@ class ColorSequence
   attr_accessor :colors
 
   def initialize
-    @colors = ["rgby"]
+    @colors = %W(r g b y)
     @guess = []
     @secret_sequence = random
   end
 
   def random
-    @secret_sequence = @colors.sample
+    4.times.map do
+      @colors.sample
+    end
   end
-  @secret_sequence
 end

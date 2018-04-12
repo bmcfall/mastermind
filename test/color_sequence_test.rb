@@ -14,7 +14,13 @@ class TestSequenceColors < Minitest::Test
   def test_attributes
     color_sequence_1 = ColorSequence.new
 
-    assert_equal ["rgby"], color_sequence_1.colors
+    assert_equal ["r", "g", "b", "y"], color_sequence_1.colors
     assert_equal [], color_sequence_1.guess
+  end
+
+  def test_color_has_random_sequence
+    color_sequence_1 = ColorSequence.new
+    binding.pry
+    refute color_sequence_1.colors == color_sequence_1.random
   end
 end
