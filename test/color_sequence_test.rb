@@ -17,10 +17,4 @@ class TestSequenceColors < Minitest::Test
     assert_equal ["rgby"], color_sequence_1.colors
     assert_equal [], color_sequence_1.guess
   end
-
-  def test_secret_sequence_sample_random_exists
-    color_sequence_1 = ColorSequence.new
-
-    assert_equal 4, color_sequence_1.random
-  end
 end
